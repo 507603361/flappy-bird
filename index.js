@@ -111,11 +111,11 @@ var bird = {
         var down = HeightArr.down;
         var oUpPillar = pillarCreate('div', ['pillar', 'pillar-up'], {
             height : up + 'px',
-            left : x * 300 + 250 + 'px'
+            left : (x + 1.5) * 300 + 'px'
         });
         var oDownPillar = pillarCreate('div', ['pillar', 'pillar-down'], {
             height : down + 'px',
-            left : x * 300  + 250 + 'px'
+            left : (x + 1.5) * 300 + 'px'
         });
         this.oPillarArr.push({
             oUp : oUpPillar,

@@ -48,6 +48,10 @@
   display: none;
   z-index: 2;
 }
+
+.score::selection{
+   user-select: none;
+}
 .mask {
   position: absolute;
   left: 0;
