@@ -31,6 +31,7 @@ var bird = {
         this.oRestart = this.oEnd.getElementsByClassName('restart')[0];
         this.oDataBox = this.oEnd.getElementsByClassName('data-box')[0];
         this.dataArr = this.getData();
+        this.oBgm = this.oSky.getElementsByClassName('bgm')[0];
     },
     animation : function () {//所有动画函数
         var self = this;
@@ -89,6 +90,7 @@ var bird = {
                 self.pillarHeight();
                 self.pillar(i);
             }
+            self.musicStart();
         }
     },
     birdDrop : function () {
@@ -190,6 +192,7 @@ var bird = {
         this.reStart();
         this.setData();
         this.renderDate();
+        this.musicEnd();
     },
     reStart : function () {
         this.oRestart.onclick = function () {
@@ -238,6 +241,14 @@ var bird = {
         }
         this.oDataBox.innerHTML = str;
 
+    },
+    musicStart : function () {
+        this.oBgm.play();
+        this.oBgm.volume = '0.2';
+
+    },
+    musicEnd : function () {
+        this.oBgm.pause();
     }
 }
 bird.init()

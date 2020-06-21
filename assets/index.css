@@ -133,3 +133,7 @@
   bottom: 0;
   background-image: url(../images/pipe1.png);
 }
+.bgm {
+  position: absolute;
+  top: -100px;
+}
